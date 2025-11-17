@@ -1,0 +1,7 @@
+UPDATE books
+SET genres = array_append(genres, 'Classic')
+WHERE id = 3; 
+
+UPDATE patrons
+SET borrowed_books = array_append(borrowed_books, 1)
+WHERE id = 1; 
