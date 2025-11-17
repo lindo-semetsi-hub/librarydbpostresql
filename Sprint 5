@@ -1,0 +1,5 @@
+DELETE FROM books
+WHERE title = 'Moby-Dick';
+
+DELETE FROM authors
+WHERE id = 5;
