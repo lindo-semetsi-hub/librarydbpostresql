@@ -1,0 +1,23 @@
+CREATE TABLE authors (
+  id INT PRIMARY KEY,
+  name VARCHAR(100),
+  nationality VARCHAR(50),
+  birth_year INT,
+  death_year INT
+);
+
+CREATE TABLE books (
+  id INT PRIMARY KEY,
+  name VARCHAR(200) NOT NULL,
+  author_id INT REFERENCES authors(id),
+  genres TEXT[],
+  published_year INT,
+  available BOOLEAN DEFAULT TRUE
+);
+
+CREATE TABLE patrons (
+  id INT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  borrowed_books INT[]
+);
