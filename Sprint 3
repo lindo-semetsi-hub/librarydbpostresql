@@ -2,3 +2,15 @@ SELECT * FROM books;
 
 SELECT * FROM books
 WHERE title ILIKE '%1984%';
+
+SELECT b.*
+FROM books b
+JOIN authors a ON b.author_id = a.id
+WHERE a.name = 'George Orwell';
+
+SELECT * FROM books 
+WHERE available = TRUE;
+
+UPDATE books
+SET available = FALSE
+WHERE id = 1; 
